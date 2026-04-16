@@ -1,0 +1,171 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Страница-1" id="AqP9HLW1t3g2FFvk0If7">
+    <mxGraphModel dx="1806" dy="1328" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aTanbdI85cZrP8w_Zefs-50" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="136" width="680" x="-2" y="-363" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-12" parent="aTanbdI85cZrP8w_Zefs-50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="&lt;font face=&quot;Courier New&quot;&gt;data/employees.csv&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="17.5" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-13" parent="aTanbdI85cZrP8w_Zefs-50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="&lt;font face=&quot;Courier New&quot;&gt;data/tasks.csv&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="182.5" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-14" parent="aTanbdI85cZrP8w_Zefs-50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="&lt;font face=&quot;Courier New&quot;&gt;data/config.json&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="347.5" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-15" parent="aTanbdI85cZrP8w_Zefs-50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="&lt;font face=&quot;Courier New&quot;&gt;data/calendar.txt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="512.5" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-44" parent="aTanbdI85cZrP8w_Zefs-50" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;" value="" vertex="1">
+          <mxGeometry height="136" width="680" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-45" parent="aTanbdI85cZrP8w_Zefs-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль внешних данных&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="217.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-56" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="298.5" x="1008.25" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-1" parent="aTanbdI85cZrP8w_Zefs-56" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;app/Main.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="136" x="81.25" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-48" parent="aTanbdI85cZrP8w_Zefs-56" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="120" width="298.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-49" parent="aTanbdI85cZrP8w_Zefs-56" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль взаимодействия с пользователем&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="26.75" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-60" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="109" width="248" x="472" y="381" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-8" parent="aTanbdI85cZrP8w_Zefs-60" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" value="&lt;font face=&quot;Courier New&quot;&gt;logging/Logger.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="23" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-58" parent="aTanbdI85cZrP8w_Zefs-60" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="109" width="248" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-59" parent="aTanbdI85cZrP8w_Zefs-60" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль логирования&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="1.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-61" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="109" width="248" x="417" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-9" parent="aTanbdI85cZrP8w_Zefs-61" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;error/Handler.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="23" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-51" parent="aTanbdI85cZrP8w_Zefs-61" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="109" width="248" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-52" parent="aTanbdI85cZrP8w_Zefs-61" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль обработки ошибок&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="1.5" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-66" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="118" width="289" x="1561" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-2" parent="aTanbdI85cZrP8w_Zefs-66" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font face=&quot;Courier New&quot;&gt;core/Types.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="22" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-3" parent="aTanbdI85cZrP8w_Zefs-66" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font face=&quot;Courier New&quot;&gt;core/Common.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="151" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-64" parent="aTanbdI85cZrP8w_Zefs-66" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="118" width="289" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-65" parent="aTanbdI85cZrP8w_Zefs-66" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль типов&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="22" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-74" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="128" width="463" x="926" y="-89" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-4" parent="aTanbdI85cZrP8w_Zefs-74" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;dataLoader/CSVLoader.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="27" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-5" parent="aTanbdI85cZrP8w_Zefs-74" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;dataLoader/ConfigLoader.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="236" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-46" parent="aTanbdI85cZrP8w_Zefs-74" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="128" width="463" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-47" parent="aTanbdI85cZrP8w_Zefs-74" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль загрузки данных&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="109" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;FilePath: employees.csv, tasks.csv, config.json, calendar.txt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="36" width="214" x="1253" y="147.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-85" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;IO (Either AppError [Employee])&lt;br&gt;IO (Either AppError [TaskRecord])&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;IO (Either AppError Config)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;IO (Either AppError Calendar)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="244" x="1035.51" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-88" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-49" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=#2D7600;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;endArrow=classic;fillColor=#60a917;" target="aTanbdI85cZrP8w_Zefs-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-89" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-46" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#006EAF;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;endArrow=classic;fillColor=#1ba1e2;" target="aTanbdI85cZrP8w_Zefs-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-90" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-46" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#006EAF;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#1ba1e2;" target="aTanbdI85cZrP8w_Zefs-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; line-height: 22px; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; text-align: start; margin: 0px !important;&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;color: rgb(0, 0, 0); font-size: 10px;&quot;&gt;(FilePath, IO a)&lt;/font&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="153" x="692" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;rotation=0;" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; line-height: 22px; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; text-align: start; margin: 0px !important;&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;color: rgb(0, 0, 0); font-size: 10px;&quot;&gt;IO(Either AppError a)&lt;/font&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="591" y="-7" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-100" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-46" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#006EAF;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#1ba1e2;" target="aTanbdI85cZrP8w_Zefs-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-105" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-48" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;strokeColor=#2D7600;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#60a917;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="aTanbdI85cZrP8w_Zefs-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020.666666666667" y="518.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-108" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;[TaskRecord], Calendar, (Day, Day)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;Map EmployeeId EmployeeKPI, Config, [Employee]&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="302.37" x="1273" y="443.5" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-109" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;Map EmployeeId EmployeeKPI,&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;Map EmployeeId Salary&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="37" width="176.37" x="893" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-110" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-70" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#001DBC;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#0050ef;" target="aTanbdI85cZrP8w_Zefs-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-111" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-51" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#6F0000;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#a20025;" target="aTanbdI85cZrP8w_Zefs-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-116" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="107" width="614.51" x="850.24" y="579" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-115" edge="1" parent="aTanbdI85cZrP8w_Zefs-116" source="aTanbdI85cZrP8w_Zefs-6" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#001DBC;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#0050ef;" target="aTanbdI85cZrP8w_Zefs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-6" parent="aTanbdI85cZrP8w_Zefs-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;productivity/Calculator.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="36.749999999999886" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-7" parent="aTanbdI85cZrP8w_Zefs-116" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;salary/Calculator.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="402.7499999999998" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-70" parent="aTanbdI85cZrP8w_Zefs-116" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="107" width="614.51" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-71" parent="aTanbdI85cZrP8w_Zefs-116" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Математический модуль&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="184.73999999999978" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-114" parent="aTanbdI85cZrP8w_Zefs-116" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;Map EmployeeId EmployeeKPI&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="22" width="176.37" x="235.75" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-118" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; text-align: start; margin: 0px !important;&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;color: rgb(0, 0, 0); font-size: 10px;&quot;&gt;(LoggerHandle, Message, Info)&lt;/font&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="212" x="735" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-122" edge="1" parent="1" source="aTanbdI85cZrP8w_Zefs-70" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#2D7600;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;fillColor=#60a917;" target="aTanbdI85cZrP8w_Zefs-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-123" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="Text" vertex="1">
+          <mxGeometry height="30" width="60" x="668" y="674" as="geometry" />
+        </mxCell>
+        <mxCell id="aTanbdI85cZrP8w_Zefs-125" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot; face=&quot;Courier New&quot;&gt;(LoggerHandler, Message, Info)&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Courier New&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span&gt;(LoggerHandler, Message, Warning)&lt;/span&gt;&lt;font&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="39" width="311" x="575" y="510" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
