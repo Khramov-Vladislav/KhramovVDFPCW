@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Страница-1" id="AqP9HLW1t3g2FFvk0If7">
-    <mxGraphModel dx="2173" dy="1435" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="976" dy="2389" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,7 +56,7 @@
           <mxGeometry height="30" width="245" x="22" as="geometry" />
         </mxCell>
         <mxCell id="aTanbdI85cZrP8w_Zefs-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;FilePath: employees.csv, tasks.csv, config.json, calendar.txt&lt;/font&gt;" vertex="1">
-          <mxGeometry height="36" width="214" x="1303" y="125" as="geometry" />
+          <mxGeometry height="36" width="214" x="1329" y="133" as="geometry" />
         </mxCell>
         <mxCell id="aTanbdI85cZrP8w_Zefs-85" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;Either AppError [Employee]&lt;br&gt;Either AppError [TaskRecord]&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;Either AppError Config&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Courier New&quot; style=&quot;font-size: 10px;&quot;&gt;Either AppError Calendar&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="55" width="178" x="996" y="508" as="geometry" />
@@ -267,6 +267,249 @@
               <mxPoint x="1062" y="892" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Структура проекта&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="121" x="267" y="1036" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-18" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="128" width="463" x="2187" y="-745" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-19" parent="GUBC_MpoQlf1ZqoUQQmb-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;dataLoader/CSVLoader.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="27" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-20" parent="GUBC_MpoQlf1ZqoUQQmb-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;dataLoader/ConfigLoader.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="236" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-21" parent="GUBC_MpoQlf1ZqoUQQmb-18" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="128" width="463" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-22" parent="GUBC_MpoQlf1ZqoUQQmb-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль загрузки данных&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="109" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-32" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-12" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;endArrow=classic;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="GUBC_MpoQlf1ZqoUQQmb-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-33" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-12" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-34" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="109" width="248" x="3389" y="-1076.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-35" parent="GUBC_MpoQlf1ZqoUQQmb-34" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" value="&lt;font face=&quot;Courier New&quot;&gt;logging/Logger.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="23" y="33" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-36" parent="GUBC_MpoQlf1ZqoUQQmb-34" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="109" width="248" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-37" parent="GUBC_MpoQlf1ZqoUQQmb-34" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль логирования&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="1.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-38" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-12" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-77" connectable="0" parent="GUBC_MpoQlf1ZqoUQQmb-38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;fillColor=#60a917;" value="LoggerHandle" vertex="1">
+          <mxGeometry relative="1" x="0.0423" y="-1" as="geometry">
+            <mxPoint x="39" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-76" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="1950" width="464" x="3998" y="-1561" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-39" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;html=1;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="1950" width="464" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-41" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;" value="&lt;span&gt;&lt;font style=&quot;color: rgb(0, 0, 0); font-size: 20px;&quot;&gt;Типы данных&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="203" x="130.5" y="11" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-42" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Табельный номер сотрудника (EmployeeId)&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;newtype EmployeeId = EmployeeId Text&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-45" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Идентификатор задачи (TaskId)&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;newtype TaskId = Taskid Text&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="159" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-47" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Иформация о сотруднике (Employee)&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;data Employee = Employee { empId&lt;/span&gt;&lt;span&gt;:: Employeeld,&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span&gt;empName :: Text, emposition :: Text, baseRate ::&lt;/span&gt;&lt;span&gt;Decimal, productivityNorm ::&lt;/span&gt;&lt;span&gt;Double }&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="118" width="370" x="47" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-49" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot;&gt;Результаты выполнения задачи (Result)&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;data Result = Success | Partial | Failture&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-50" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot; face=&quot;Helvetica&quot;&gt;Запись о выполненной задаче (TaskRecord)&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;text-align: start;&quot;&gt;data TaskRecord = TaskRecord { taskEmployeeId :: EmployeeId, taskDate :: Day, taskId :: TaskId, taskComplexity :: Int,&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot; face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;text-align: start;&quot;&gt;plannedHours :: Double, actualHours :: Double, taskResult :: Result }&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="133" width="370" x="47" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-53" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;Конфигурация расчета (Config)&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;data Config = Config { baseKPI :: Double, bonusScale :: [(Double, Double)],&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;taxRates :: TaxRates }&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-55" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Ставки налогов (TaxRates)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;data TaxRates = TaxRates { ndflRate :: Double, contributions :: Double }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="776" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-57" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Производственный календарь(Calendar)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data Calendar = Calendar { holidays :: Set Day, weekends :: Set DayOfWeek }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-59" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Промежуточный результат продуктивности задачи (TaskProductivity)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data TaskProductivity = TaskProductivity { rawScore :: Double, adjustedScore :: Double }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="1052" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-61" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Интегральный KPI сотрудника за период (EmployeeKPI)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data EmployeeKPI = EmployeeKPI { totalProductivity :: Double, kpiCoefficient :: Double, periodDaysWorked :: Int }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-63" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Итоговая зарплата с налогами (Salry)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data Salary = Salary { baseSalary :: Decimal,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;productivityBonus :: Decimal, totalAccrued :: Decimal,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;taxDeduction :: Decimal, netSalary :: Decimal }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="361" x="51.5" y="1326" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-66" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Обобщенный тип ошибок (AppError)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data AppError = FileNotFound FilePath | ParseError String | ValidationError String | DivisionByZero | EmployeeNotFound EmployeeId | InvalidPeriod String&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="111" width="370" x="47" y="1462" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-69" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot;&gt;Уровень важности логируемого сообщения (LogLevel)&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: center;&quot;&gt;data LogLevel = Info | Warning | Error&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-71" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot;&gt;Дескриптор для работы с логгером(LoggerHandle)&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;data LoggerHandle = LoggerHandle { loggerSet :: LoggerSet, logFile :: FilePath }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="1683" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-74" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot;&gt;Начало и конец отчетного периода(Period)&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;type Period = (Day, Day)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="1852" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-75" parent="GUBC_MpoQlf1ZqoUQQmb-76" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" value="&lt;font color=&quot;#000000&quot;&gt;Шкала бонусов(BonusScale)&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;type BonusScale = [(Double, Double)]&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="370" x="47" y="1768" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-78" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="118" width="289" x="2272.75" y="-1003" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-79" parent="GUBC_MpoQlf1ZqoUQQmb-78" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font face=&quot;Courier New&quot;&gt;core/Types.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="22" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-80" parent="GUBC_MpoQlf1ZqoUQQmb-78" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font face=&quot;Courier New&quot;&gt;core/Common.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="151" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-81" parent="GUBC_MpoQlf1ZqoUQQmb-78" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="118" width="289" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-82" parent="GUBC_MpoQlf1ZqoUQQmb-78" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль типов&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="22" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-14" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;dashed=1;strokeColor=#000000;" target="GUBC_MpoQlf1ZqoUQQmb-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#000000;" value="&lt;font color=&quot;#000000&quot;&gt;Точка входа в программу&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2937.25" y="-1145" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#000000;" value="&lt;font color=&quot;#000000&quot;&gt;Точка выхода из программы&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2937.25" y="-805" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-16" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-12" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-84" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-81" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-89" connectable="0" parent="GUBC_MpoQlf1ZqoUQQmb-84" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;Employee, TaskRecord, Config, Calendar, EmployeeKPI, Salary, Result, EmployeeId&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1115" y="-1" as="geometry">
+            <mxPoint x="45" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;" value="Text" vertex="1">
+          <mxGeometry height="30" width="60" x="2808" y="-568" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-90" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="109" width="248" x="3389" y="-922.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-91" parent="GUBC_MpoQlf1ZqoUQQmb-90" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;error/Handler.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="23" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-92" parent="GUBC_MpoQlf1ZqoUQQmb-90" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="109" width="248" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-93" parent="GUBC_MpoQlf1ZqoUQQmb-90" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль обработки ошибок&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="1.5" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-19" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-92" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3158" y="-650" as="sourcePoint" />
+            <mxPoint x="3420" y="-650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-20" connectable="0" parent="Gt9OJ0VjXKd-MalfxG0r-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;AppError&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1115" y="-1" as="geometry">
+            <mxPoint x="32" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-21" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-82" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;resizable=0;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-22" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;Employee, TaskRecord, TaskId, Result, EmployeeId&lt;/span&gt;" vertex="1">
+          <mxGeometry x="2413" y="-1056" as="geometry">
+            <mxPoint x="1" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-23" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="298.5" x="2848" y="-1005" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-11" parent="Gt9OJ0VjXKd-MalfxG0r-23" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;app/Main.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="136" x="81.25" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-12" parent="Gt9OJ0VjXKd-MalfxG0r-23" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="120" width="298.5" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-13" parent="Gt9OJ0VjXKd-MalfxG0r-23" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Модуль взаимодействия с пользователем&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="26.75" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-24" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-81" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;resizable=0;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-26" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;Employee, TaskRecord, Config, Calendar, EmployeeKPI, Salary, Result, EmployeeId&lt;/span&gt;" vertex="1">
+          <mxGeometry x="2373" y="-813.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-27" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-81" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.563;entryY=-0.011;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;resizable=0;endArrow=classic;curved=1;" target="GUBC_MpoQlf1ZqoUQQmb-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2937" y="-1286" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-28" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;EmployeeId&lt;/span&gt;" vertex="1">
+          <mxGeometry x="3057.25" y="-1176.5" as="geometry">
+            <mxPoint x="1" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-29" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;EmployeeId&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-wrap-mode: wrap;&quot;&gt;FilePath&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry x="3057.25" y="-668" as="geometry">
+            <mxPoint x="1" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-31" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-81" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;resizable=0;endArrow=classic;curved=1;" target="GUBC_MpoQlf1ZqoUQQmb-92">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2978" y="-536" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-32" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;LoggerHandle&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry x="3555" y="-938" as="geometry">
+            <mxPoint x="1" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-34" edge="1" parent="1" source="GUBC_MpoQlf1ZqoUQQmb-93" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;resizable=0;endArrow=classic;" target="GUBC_MpoQlf1ZqoUQQmb-36" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-35" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;strokeColor=#2D7600;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=none;fillColor=#60a917;" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;FilePath&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry x="2764" y="-1052" as="geometry">
+            <mxPoint x="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-36" parent="1" style="text;whiteSpace=wrap;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;resizable=0;align=center;" value="[TaskRecord], &#xa;Calendar, (Day,Day), &#xa;Map EmployeeId EmployeeKPI, &#xa;Config, &#xa;[Employee]" vertex="1">
+          <mxGeometry height="36" width="493" x="2591.495" y="-849.505" as="geometry" />
+        </mxCell>
+        <mxCell id="Gt9OJ0VjXKd-MalfxG0r-37" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="112" width="473" x="2180.75" y="-1229" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-27" parent="Gt9OJ0VjXKd-MalfxG0r-37" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;productivity/Calculator.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="20" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-28" parent="Gt9OJ0VjXKd-MalfxG0r-37" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;container=0;" value="&lt;font face=&quot;Courier New&quot;&gt;salary/Calculator.hs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="202" x="250" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-29" parent="Gt9OJ0VjXKd-MalfxG0r-37" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#ffffff;labelBackgroundColor=default;fillColor=none;gradientColor=none;dashed=1;container=0;" value="" vertex="1">
+          <mxGeometry height="112" width="473" as="geometry" />
+        </mxCell>
+        <mxCell id="GUBC_MpoQlf1ZqoUQQmb-30" parent="Gt9OJ0VjXKd-MalfxG0r-37" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;labelBackgroundColor=none;container=0;" value="&lt;font color=&quot;#000000&quot;&gt;Математический модуль&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="245" x="114" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
