@@ -1,0 +1,10 @@
+{
+  "baseKpi": 1.0,
+  "bonusScale": [
+    { "threshold": 1.0, "bonusPercent": 0.05 },
+    { "threshold": 1.2, "bonusPercent": 0.1 },
+    { "threshold": 1.5, "bonusPercent": 0.2 }
+  ],
+  "taxRate": 0.13,
+  "socialRate": 0.3
+}

@@ -25,7 +25,17 @@ source-repository head
 
 library
   exposed-modules:
+      Application.UseCases
+      Domain.Payroll
+      Domain.Productivity
+      Domain.Types
+      Infrastructure.Logger
+      Infrastructure.Paths
+      Infrastructure.Storage
+      Interface.Console
       Lib
+      Utils.DateUtils
+      Utils.Validation
   other-modules:
       Paths_kpi_payroll
   autogen-modules:
@@ -34,7 +44,14 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , directory
+    , time
+    , vector
   default-language: Haskell2010
 
 executable kpi-payroll-exe
@@ -47,8 +64,15 @@ executable kpi-payroll-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , directory
     , kpi-payroll
+    , time
+    , vector
   default-language: Haskell2010
 
 test-suite kpi-payroll-test
@@ -62,6 +86,14 @@ test-suite kpi-payroll-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , directory
     , kpi-payroll
+    , time
+    , vector
   default-language: Haskell2010

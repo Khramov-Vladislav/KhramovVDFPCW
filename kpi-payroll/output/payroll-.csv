@@ -1,0 +1,3 @@
+employee_id,full_name,position,kpi_coeff,worked_hours,gross_base,bonus_amount,gross_total,deductions,net_salary
+E001,Иванов Иван Иванович,Backend Developer,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+E002,Петров Петр Петрович,QA Engineer,0.0,0.0,0.0,0.0,0.0,0.0,0.0

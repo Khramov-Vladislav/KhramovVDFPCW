@@ -21,6 +21,13 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- aeson
+- bytestring
+- cassava
+- containers
+- directory
+- time
+- vector
 
 ghc-options:
 - -Wall
@@ -34,6 +41,18 @@ ghc-options:
 - -Wredundant-constraints
 
 library:
+  exposed-modules:
+    - Application.UseCases
+    - Domain.Payroll
+    - Domain.Productivity
+    - Domain.Types
+    - Infrastructure.Logger
+    - Infrastructure.Paths
+    - Infrastructure.Storage
+    - Interface.Console
+    - Lib
+    - Utils.DateUtils
+    - Utils.Validation
   source-dirs: src
 
 executables:
@@ -57,3 +76,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - kpi-payroll
+    - QuickCheck
+    - time
