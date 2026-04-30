@@ -1,5 +1,0 @@
-task_id,complexity_coeff
-DEV_FEATURE,1.3
-DEV_BUGFIX,1.1
-QA_REGRESSION,1.0
-QA_AUTOTEST,1.2

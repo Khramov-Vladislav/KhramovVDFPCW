@@ -1,10 +1,10 @@
-module Domain.Payroll
-  ( buildPayrollRows,
+module Salary.Calculator
+  ( buildPayrollRows
   )
 where
 
+import Core.Types
 import Data.List (sortOn)
-import Domain.Types
 
 bonusPercentForKpi :: [BonusTier] -> Double -> Double
 bonusPercentForKpi tiers kpi =

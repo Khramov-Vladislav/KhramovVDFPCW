@@ -1,4 +1,4 @@
-module Domain.Types
+module Core.Types
   ( TaskResult (..),
     TaskType (..),
     TaskRecord (..),
@@ -7,11 +7,10 @@ module Domain.Types
     Config (..),
     ProductivityRow (..),
     PayrollRow (..),
-    AppData (..),
+    AppData (..)
   )
 where
 
-import qualified Data.Map.Strict as M
 import qualified Data.Set as S
 import Data.Time (Day)
 
@@ -81,7 +80,6 @@ data PayrollRow = PayrollRow
 data AppData = AppData
   { adEmployees :: [Employee],
     adTasks :: [TaskRecord],
-    adTaskTypes :: M.Map String TaskType,
     adCalendarDaysOff :: S.Set Day,
     adConfig :: Config
   }

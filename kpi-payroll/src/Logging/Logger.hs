@@ -1,12 +1,14 @@
-module Infrastructure.Logger
+module Logging.Logger
   ( logInfo,
-    logError,
+    logError
   )
 where
 
 import Data.Time (defaultTimeLocale, formatTime, getCurrentTime)
-import Infrastructure.Paths (logsDir)
 import System.Directory (createDirectoryIfMissing)
+
+logsDir :: FilePath
+logsDir = "logs"
 
 writeLog :: String -> String -> IO ()
 writeLog level msg = do

@@ -1,12 +1,13 @@
-module Domain.Productivity
+module Productivity.Calculator
   ( productivityForTask,
     filterTasksByMonth,
     buildProductivityRows,
+    topProductivity
   )
 where
 
-import Domain.Types
-import qualified Data.Map.Strict as M
+import Core.Types
+import Data.List (sortOn)
 import Utils.DateUtils (monthPrefix)
 
 resultFactor :: TaskResult -> Double
@@ -27,17 +28,18 @@ productivityForTask taskType taskRec =
 filterTasksByMonth :: String -> [TaskRecord] -> [TaskRecord]
 filterTasksByMonth ym = filter (\t -> monthPrefix (taskDate t) == ym)
 
-buildProductivityRows :: M.Map String TaskType -> [Employee] -> [TaskRecord] -> [ProductivityRow]
-buildProductivityRows taskTypes employees tasks = map mkRow employees
+buildProductivityRows :: [Employee] -> [TaskRecord] -> [ProductivityRow]
+buildProductivityRows employees tasks = map mkRow employees
   where
-    tasksByEmployee = M.fromListWith (<>) [(taskEmployeeId t, [t]) | t <- tasks]
-    lookupType taskRec = M.findWithDefault (TaskType (taskId taskRec) 1.0) (taskId taskRec) taskTypes
+    tasksByEmployee = foldr collect [] tasks
+    collect t acc = (taskEmployeeId t, [t]) : acc
+    tasksForEmployee eid = concat [xs | (k, xs) <- tasksByEmployee, k == eid]
     mkRow emp =
-      let empTasks = M.findWithDefault [] (employeeId emp) tasksByEmployee
-          score = sum [productivityForTask (lookupType t) t | t <- empTasks]
+      let empTasks = tasksForEmployee (employeeId emp)
+          score = sum [productivityForTask (TaskType (taskId t) 1.0) t | t <- empTasks]
           workedHours = sum (map taskActualHours empTasks)
-          kpiCoeff =
-            if employeeNorm emp <= 0
-              then 0
-              else score / employeeNorm emp
+          kpiCoeff = if employeeNorm emp <= 0 then 0 else score / employeeNorm emp
        in ProductivityRow emp score kpiCoeff workedHours
+
+topProductivity :: Int -> [ProductivityRow] -> [ProductivityRow]
+topProductivity n rows = take n (reverse (sortOn prScore rows))

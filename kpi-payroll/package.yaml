@@ -42,15 +42,14 @@ ghc-options:
 
 library:
   exposed-modules:
-    - Application.UseCases
-    - Domain.Payroll
-    - Domain.Productivity
-    - Domain.Types
-    - Infrastructure.Logger
-    - Infrastructure.Paths
-    - Infrastructure.Storage
-    - Interface.Console
-    - Lib
+    - Core.Common
+    - Core.Types
+    - DataLoader.CSVLoader
+    - DataLoader.ConfigLoader
+    - DataLoader.Error.Handler
+    - Logging.Logger
+    - Productivity.Calculator
+    - Salary.Calculator
     - Utils.DateUtils
     - Utils.Validation
   source-dirs: src

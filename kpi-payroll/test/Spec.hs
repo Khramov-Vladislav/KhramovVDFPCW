@@ -1,9 +1,9 @@
 module Main (main) where
 
 import Data.Time (fromGregorian)
-import Domain.Payroll (buildPayrollRows)
-import Domain.Productivity (productivityForTask)
-import Domain.Types
+import Core.Types
+import Productivity.Calculator (productivityForTask)
+import Salary.Calculator (buildPayrollRows)
 import Test.QuickCheck (Arbitrary (arbitrary), Positive (..), elements, quickCheck)
 
 instance Arbitrary TaskResult where
