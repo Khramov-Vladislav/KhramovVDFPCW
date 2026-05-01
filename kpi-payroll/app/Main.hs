@@ -72,21 +72,22 @@ printPayroll :: MonthResult -> IO ()
 printPayroll res = do
   putStrLn ""
   putStrLn "Таблица расчета зарплаты:"
-  putStrLn (replicate 86 '-')
-  putStrLn (printf "%-32s | %8s | %8s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("К выплате, руб." :: String))
-  putStrLn (replicate 86 '-')
+  putStrLn (replicate 108 '-')
+  putStrLn (printf "%-32s | %8s | %8s | %-15s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("Статус месяца" :: String) ("К выплате, руб." :: String))
+  putStrLn (replicate 108 '-')
   mapM_
     ( \row ->
         putStrLn $
           printf
-            "%-32s | %8.3f | %8.1f | %18.2f"
+            "%-32s | %8.3f | %8.1f | %-15s | %18.2f"
             (employeeName (pyEmployee row))
             (pyKpiCoeff row)
             (pyWorkedHours row)
+            (if pyIsPartialMonth row then "неполный месяц" else "полный месяц")
             (pyNetSalary row)
     )
     (mrPayrollRows res)
-  putStrLn (replicate 86 '-')
+  putStrLn (replicate 108 '-')
 
 printTop :: MonthResult -> IO ()
 printTop res = do

@@ -28,7 +28,7 @@ prop_salaryNonNegative :: Positive Double -> Positive Double -> Positive Double 
 prop_salaryNonNegative (Positive baseRate) (Positive norm) (Positive hours) =
   let employee = Employee "e1" "Test User" "Engineer" baseRate norm
       prodRow = ProductivityRow employee (norm * 1.1) 1.1 hours
-      cfg = Config 1.0 [BonusTier 1.0 0.1] 0.13 0.3
+      cfg = Config 1.0 [BonusTier 1.0 0.1] 0.13 0.3 160
       payrollRows = buildPayrollRows cfg [prodRow]
    in case payrollRows of
         [payroll] -> pyNetSalary payroll >= 0 && pyGrossTotal payroll >= 0

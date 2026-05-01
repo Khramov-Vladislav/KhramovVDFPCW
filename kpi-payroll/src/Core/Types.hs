@@ -53,7 +53,8 @@ data Config = Config
   { cfgBaseKpi :: Double,
     cfgBonusScale :: [BonusTier],
     cfgTaxRate :: Double,
-    cfgSocialRate :: Double
+    cfgSocialRate :: Double,
+    cfgMinMonthlyHours :: Double
   }
   deriving (Eq, Show)
 
@@ -69,6 +70,7 @@ data PayrollRow = PayrollRow
   { pyEmployee :: Employee,
     pyKpiCoeff :: Double,
     pyWorkedHours :: Double,
+    pyIsPartialMonth :: Bool,
     pyGrossBase :: Double,
     pyBonusAmount :: Double,
     pyGrossTotal :: Double,

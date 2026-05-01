@@ -28,16 +28,22 @@ buildPayrollRows cfg = map mk
   where
     mk prod =
       let emp = prEmployee prod
+          workedHours = prWorkedHours prod
+          minHours = max 1 (cfgMinMonthlyHours cfg)
+          isPartialMonth = workedHours < minHours
+          monthCoverage = min 1.0 (workedHours / minHours)
           grossBase = employeeBaseRate emp * prWorkedHours prod
           perf = performanceMultiplier (cfgBaseKpi cfg) (prKpiCoeff prod)
+          perfEffective = if isPartialMonth then min perf 1.0 else perf
           bonusPct = bonusPercentForKpi (cfgBonusScale cfg) (prKpiCoeff prod)
-          bonusAmount = grossBase * bonusPct
-          grossTotal = grossBase * perf + bonusAmount
+          bonusAmount = grossBase * bonusPct * monthCoverage
+          grossTotal = grossBase * perfEffective + bonusAmount
           deductions = grossTotal * (cfgTaxRate cfg + cfgSocialRate cfg)
        in PayrollRow
             { pyEmployee = emp,
               pyKpiCoeff = prKpiCoeff prod,
-              pyWorkedHours = prWorkedHours prod,
+              pyWorkedHours = workedHours,
+              pyIsPartialMonth = isPartialMonth,
               pyGrossBase = grossBase,
               pyBonusAmount = bonusAmount,
               pyGrossTotal = grossTotal,
