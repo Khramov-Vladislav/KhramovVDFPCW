@@ -17,7 +17,8 @@ resultFactor Failed = 0.0
 
 productivityForTask :: TaskType -> TaskRecord -> Double
 productivityForTask taskType taskRec =
-  let base = fromIntegral (taskComplexity taskRec) * complexityCoeff taskType
+  let -- Scale complexity points to monthly KPI-like units.
+      base = fromIntegral (taskComplexity taskRec) * complexityCoeff taskType * 8.0
       ratioRaw =
         if taskActualHours taskRec <= 0
           then 2.0
@@ -29,7 +30,7 @@ filterTasksByMonth :: String -> [TaskRecord] -> [TaskRecord]
 filterTasksByMonth ym = filter (\t -> monthPrefix (taskDate t) == ym)
 
 buildProductivityRows :: [Employee] -> [TaskRecord] -> [ProductivityRow]
-buildProductivityRows employees tasks = map mkRow employees
+buildProductivityRows employees tasks = filter ((> 0) . prWorkedHours) (map mkRow employees)
   where
     tasksByEmployee = foldr collect [] tasks
     collect t acc = (taskEmployeeId t, [t]) : acc

@@ -36,27 +36,18 @@ mainMenu appData = do
   case cmd of
     "1" -> do
       month <- askMonth
-      case month of
-        Nothing -> mainMenu appData
-        Just m -> do
-          printPayroll (monthResult appData m)
-          logInfo ("Рассчитана зарплата за " <> m)
-          mainMenu appData
+      printPayroll (monthResult appData month)
+      logInfo ("Рассчитана зарплата за " <> month)
+      mainMenu appData
     "2" -> do
       month <- askMonth
-      case month of
-        Nothing -> mainMenu appData
-        Just m -> do
-          printTop (monthResult appData m)
-          logInfo ("Показан топ продуктивности за " <> m)
-          mainMenu appData
+      printTop (monthResult appData month)
+      logInfo ("Показан топ продуктивности за " <> month)
+      mainMenu appData
     "3" -> do
       month <- askMonth
-      case month of
-        Nothing -> mainMenu appData
-        Just m -> do
-          exportMonth m (monthResult appData m)
-          mainMenu appData
+      exportMonth month (monthResult appData month)
+      mainMenu appData
     "0" -> do
       logInfo "Приложение завершено"
       putStrLn "Работа завершена."
@@ -65,17 +56,17 @@ mainMenu appData = do
       logError ("Неизвестная команда: " <> cmd)
       mainMenu appData
 
-askMonth :: IO (Maybe String)
+askMonth :: IO String
 askMonth = do
   putStrLn "Введите месяц 2025 года (формат ГГГГ-ММ):"
   putStr "> "
   month <- getLine
   if validateMonth month
-    then pure (Just month)
+    then pure month
     else do
       putStrLn "Неверный месяц. Допустимы только значения от 2025-01 до 2025-12."
       logError ("Неверный формат месяца: " <> month)
-      pure Nothing
+      askMonth
 
 printPayroll :: MonthResult -> IO ()
 printPayroll res = do

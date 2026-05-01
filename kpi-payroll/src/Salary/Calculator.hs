@@ -17,8 +17,11 @@ bonusPercentForKpi tiers kpi =
 
 performanceMultiplier :: Double -> Double -> Double
 performanceMultiplier baseKpi kpi
-  | kpi >= baseKpi = kpi
-  | otherwise = 0.8 + 0.2 * kpi
+  | baseKpi <= 0 = 1.0
+  | otherwise =
+      let normalized = kpi / baseKpi
+          raw = 0.85 + 0.5 * normalized
+       in max 0.70 (min 1.35 raw)
 
 buildPayrollRows :: Config -> [ProductivityRow] -> [PayrollRow]
 buildPayrollRows cfg = map mk
