@@ -7,6 +7,7 @@ import Logging.Logger (logError, logInfo)
 import Productivity.Calculator (buildProductivityRows, filterTasksByMonth, topProductivity)
 import Salary.Calculator (buildPayrollRows)
 import System.Directory (createDirectoryIfMissing)
+import Text.Printf (printf)
 import Utils.Validation (validateMonth)
 
 main :: IO ()
@@ -15,21 +16,22 @@ main = do
   case initialized of
     Left err -> do
       let msg = renderAppError err
-      putStrLn ("Initialization failed: " <> msg)
-      logError ("Initialization failed: " <> msg)
+      putStrLn ("Ошибка инициализации: " <> msg)
+      logError ("Ошибка инициализации: " <> msg)
     Right appData -> do
-      logInfo "Application started"
+      logInfo "Приложение запущено"
       mainMenu appData
 
 mainMenu :: AppData -> IO ()
 mainMenu appData = do
   putStrLn ""
-  putStrLn "=== KPI Payroll ==="
-  putStrLn "1. Calculate payroll for month (YYYY-MM)"
-  putStrLn "2. Show top productivity for month (YYYY-MM)"
-  putStrLn "3. Export payroll CSV for month (YYYY-MM)"
-  putStrLn "0. Exit"
-  putStr "Choose action: "
+  putStrLn "=== Учет KPI и расчет зарплаты ==="
+  putStrLn "1. Рассчитать зарплату за месяц (ГГГГ-ММ)"
+  putStrLn "2. Показать топ сотрудников по продуктивности (ГГГГ-ММ)"
+  putStrLn "3. Выгрузить зарплату в CSV (ГГГГ-ММ)"
+  putStrLn "0. Выход"
+  putStrLn "Выберите действие:"
+  putStr "> "
   cmd <- getLine
   case cmd of
     "1" -> do
@@ -38,7 +40,7 @@ mainMenu appData = do
         Nothing -> mainMenu appData
         Just m -> do
           printPayroll (monthResult appData m)
-          logInfo ("Calculated payroll for " <> m)
+          logInfo ("Рассчитана зарплата за " <> m)
           mainMenu appData
     "2" -> do
       month <- askMonth
@@ -46,7 +48,7 @@ mainMenu appData = do
         Nothing -> mainMenu appData
         Just m -> do
           printTop (monthResult appData m)
-          logInfo ("Displayed top productivity for " <> m)
+          logInfo ("Показан топ продуктивности за " <> m)
           mainMenu appData
     "3" -> do
       month <- askMonth
@@ -56,63 +58,71 @@ mainMenu appData = do
           exportMonth m (monthResult appData m)
           mainMenu appData
     "0" -> do
-      logInfo "Application exited"
-      putStrLn "Bye!"
+      logInfo "Приложение завершено"
+      putStrLn "Работа завершена."
     _ -> do
-      putStrLn "Unknown command"
-      logError ("Unknown command: " <> cmd)
+      putStrLn "Неизвестная команда."
+      logError ("Неизвестная команда: " <> cmd)
       mainMenu appData
 
 askMonth :: IO (Maybe String)
 askMonth = do
-  putStr "Enter month (YYYY-MM): "
+  putStrLn "Введите месяц 2025 года (формат ГГГГ-ММ):"
+  putStr "> "
   month <- getLine
   if validateMonth month
     then pure (Just month)
     else do
-      putStrLn "Invalid format. Expected YYYY-MM."
-      logError ("Invalid month input: " <> month)
+      putStrLn "Неверный месяц. Допустимы только значения от 2025-01 до 2025-12."
+      logError ("Неверный формат месяца: " <> month)
       pure Nothing
 
 printPayroll :: MonthResult -> IO ()
 printPayroll res = do
-  putStrLn "Employee | KPI | Hours | Net salary"
+  putStrLn ""
+  putStrLn "Таблица расчета зарплаты:"
+  putStrLn (replicate 86 '-')
+  putStrLn (printf "%-32s | %8s | %8s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("К выплате, руб." :: String))
+  putStrLn (replicate 86 '-')
   mapM_
     ( \row ->
-        putStrLn
-          ( employeeName (pyEmployee row)
-              <> " | "
-              <> show (pyKpiCoeff row)
-              <> " | "
-              <> show (pyWorkedHours row)
-              <> " | "
-              <> show (pyNetSalary row)
-          )
+        putStrLn $
+          printf
+            "%-32s | %8.3f | %8.1f | %18.2f"
+            (employeeName (pyEmployee row))
+            (pyKpiCoeff row)
+            (pyWorkedHours row)
+            (pyNetSalary row)
     )
     (mrPayrollRows res)
+  putStrLn (replicate 86 '-')
 
 printTop :: MonthResult -> IO ()
 printTop res = do
-  putStrLn "Top productivity employees:"
+  putStrLn ""
+  putStrLn "Топ сотрудников по продуктивности:"
+  putStrLn (replicate 86 '-')
+  putStrLn (printf "%-32s | %14s | %10s" ("Сотрудник" :: String) ("Балл" :: String) ("KPI" :: String))
+  putStrLn (replicate 86 '-')
   mapM_
     ( \row ->
-        putStrLn
-          ( employeeName (prEmployee row)
-              <> ": score="
-              <> show (prScore row)
-              <> ", kpi="
-              <> show (prKpiCoeff row)
-          )
+        putStrLn $
+          printf
+            "%-32s | %14.3f | %10.3f"
+            (employeeName (prEmployee row))
+            (prScore row)
+            (prKpiCoeff row)
     )
     (topProductivity 10 (mrProductivityRows res))
+  putStrLn (replicate 86 '-')
 
 exportMonth :: String -> MonthResult -> IO ()
 exportMonth monthText res = do
   createDirectoryIfMissing True "output"
   let fp = "output/payroll-" <> monthText <> ".csv"
   savePayrollCsv fp (mrPayrollRows res)
-  logInfo ("Exported payroll to " <> fp)
-  putStrLn ("Saved: " <> fp)
+  logInfo ("Выгружен отчет: " <> fp)
+  putStrLn ("Файл сохранен: " <> fp)
 
 data MonthResult = MonthResult
   { mrProductivityRows :: [ProductivityRow],
