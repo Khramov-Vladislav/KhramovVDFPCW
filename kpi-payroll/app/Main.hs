@@ -3,11 +3,13 @@ module Main (main) where
 import Core.Common (renderAppError)
 import Core.Types
 import DataLoader.Error.Handler (loadAppData, savePayrollCsv)
+import Data.List (nub, sort)
 import Logging.Logger (logError, logInfo)
 import Productivity.Calculator (buildProductivityRows, filterTasksByMonth, topProductivity)
 import Salary.Calculator (buildPayrollRows)
 import System.Directory (createDirectoryIfMissing)
 import Text.Printf (printf)
+import Utils.DateUtils (monthPrefix)
 import Utils.Validation (validateMonth)
 
 main :: IO ()
@@ -35,17 +37,17 @@ mainMenu appData = do
   cmd <- getLine
   case cmd of
     "1" -> do
-      month <- askMonth
+      month <- askMonth appData
       printPayroll (monthResult appData month)
       logInfo ("Рассчитана зарплата за " <> month)
       mainMenu appData
     "2" -> do
-      month <- askMonth
+      month <- askMonth appData
       printTop (monthResult appData month)
       logInfo ("Показан топ продуктивности за " <> month)
       mainMenu appData
     "3" -> do
-      month <- askMonth
+      month <- askMonth appData
       exportMonth month (monthResult appData month)
       mainMenu appData
     "0" -> do
@@ -56,38 +58,40 @@ mainMenu appData = do
       logError ("Неизвестная команда: " <> cmd)
       mainMenu appData
 
-askMonth :: IO String
-askMonth = do
-  putStrLn "Введите месяц 2025 года (формат ГГГГ-ММ):"
+askMonth :: AppData -> IO String
+askMonth appData = do
+  putStrLn "Введите месяц (формат ГГГГ-ММ)."
   putStr "> "
   month <- getLine
-  if validateMonth month
+  if validateMonth month && month `elem` availableMonths appData
     then pure month
     else do
-      putStrLn "Неверный месяц. Допустимы только значения от 2025-01 до 2025-12."
+      putStrLn "Неверный месяц. Введите значение из списка доступных месяцев."
       logError ("Неверный формат месяца: " <> month)
-      askMonth
+      askMonth appData
 
 printPayroll :: MonthResult -> IO ()
 printPayroll res = do
   putStrLn ""
   putStrLn "Таблица расчета зарплаты:"
-  putStrLn (replicate 108 '-')
-  putStrLn (printf "%-32s | %8s | %8s | %-15s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("Статус месяца" :: String) ("К выплате, руб." :: String))
-  putStrLn (replicate 108 '-')
+  putStrLn (replicate 132 '-')
+  putStrLn (printf "%-28s | %8s | %6s | %6s | %6s | %-15s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("Бол." :: String) ("БС" :: String) ("Статус месяца" :: String) ("К выплате, руб." :: String))
+  putStrLn (replicate 132 '-')
   mapM_
     ( \row ->
         putStrLn $
           printf
-            "%-32s | %8.3f | %8.1f | %-15s | %18.2f"
+            "%-28s | %8.3f | %6.1f | %6d | %6d | %-15s | %18.2f"
             (employeeName (pyEmployee row))
             (pyKpiCoeff row)
             (pyWorkedHours row)
+            (pySickDays row)
+            (pyUnpaidDays row)
             (if pyIsPartialMonth row then "неполный месяц" else "полный месяц")
             (pyNetSalary row)
     )
     (mrPayrollRows res)
-  putStrLn (replicate 108 '-')
+  putStrLn (replicate 132 '-')
 
 printTop :: MonthResult -> IO ()
 printTop res = do
@@ -125,5 +129,8 @@ monthResult :: AppData -> String -> MonthResult
 monthResult appData monthText =
   let monthTasks = filterTasksByMonth monthText (adTasks appData)
       productivityRows = buildProductivityRows (adEmployees appData) monthTasks
-      payrollRows = buildPayrollRows (adConfig appData) productivityRows
+      payrollRows = buildPayrollRows (adConfig appData) monthText (adAbsences appData) productivityRows
    in MonthResult productivityRows payrollRows
+
+availableMonths :: AppData -> [String]
+availableMonths appData = sort . nub $ map (monthPrefix . taskDate) (adTasks appData)

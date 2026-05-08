@@ -5,6 +5,7 @@ module Core.Types
     Employee (..),
     BonusTier (..),
     Config (..),
+    AbsenceRecord (..),
     ProductivityRow (..),
     PayrollRow (..),
     AppData (..)
@@ -54,7 +55,16 @@ data Config = Config
     cfgBonusScale :: [BonusTier],
     cfgTaxRate :: Double,
     cfgSocialRate :: Double,
-    cfgMinMonthlyHours :: Double
+    cfgMinMonthlyHours :: Double,
+    cfgSickDayPayRate :: Double
+  }
+  deriving (Eq, Show)
+
+data AbsenceRecord = AbsenceRecord
+  { arEmployeeId :: String,
+    arMonth :: String,
+    arSickDays :: Int,
+    arUnpaidDays :: Int
   }
   deriving (Eq, Show)
 
@@ -70,6 +80,8 @@ data PayrollRow = PayrollRow
   { pyEmployee :: Employee,
     pyKpiCoeff :: Double,
     pyWorkedHours :: Double,
+    pySickDays :: Int,
+    pyUnpaidDays :: Int,
     pyIsPartialMonth :: Bool,
     pyGrossBase :: Double,
     pyBonusAmount :: Double,
@@ -82,6 +94,7 @@ data PayrollRow = PayrollRow
 data AppData = AppData
   { adEmployees :: [Employee],
     adTasks :: [TaskRecord],
+    adAbsences :: [AbsenceRecord],
     adCalendarDaysOff :: S.Set Day,
     adConfig :: Config
   }

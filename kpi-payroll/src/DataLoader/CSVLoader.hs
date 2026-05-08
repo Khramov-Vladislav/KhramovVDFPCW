@@ -3,6 +3,7 @@
 module DataLoader.CSVLoader
   ( loadEmployees,
     loadTasks,
+    loadAbsences,
     loadCalendar,
     readCsvByName
   )
@@ -53,6 +54,14 @@ instance FromNamedRecord TaskRecord where
       <*> rec .: "actual_hours"
       <*> rec .: "result"
 
+instance FromNamedRecord AbsenceRecord where
+  parseNamedRecord rec =
+    AbsenceRecord
+      <$> rec .: "employee_id"
+      <*> rec .: "month"
+      <*> rec .: "sick_days"
+      <*> rec .: "unpaid_days"
+
 readCsvByName :: FromNamedRecord a => String -> FilePath -> IO (Either AppError [a])
 readCsvByName label fp = do
   exists <- doesFileExist fp
@@ -70,6 +79,9 @@ loadEmployees = readCsvByName "employees"
 
 loadTasks :: FilePath -> IO (Either AppError [TaskRecord])
 loadTasks = readCsvByName "tasks"
+
+loadAbsences :: FilePath -> IO (Either AppError [AbsenceRecord])
+loadAbsences = readCsvByName "absences"
 
 loadCalendar :: FilePath -> IO (Either AppError (S.Set Day))
 loadCalendar fp = do
