@@ -8,5 +8,6 @@
   "taxRate": 0.13,
   "socialRate": 0.3,
   "minMonthlyHours": 160,
-  "sickDayPayRate": 0.8
+  "sickDayPayRate": 0.8,
+  "hoursPerWorkday": 8
 }

@@ -75,13 +75,13 @@ printPayroll res = do
   putStrLn ""
   putStrLn "Таблица расчета зарплаты:"
   putStrLn (replicate 132 '-')
-  putStrLn (printf "%-28s | %8s | %6s | %6s | %6s | %-15s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("Бол." :: String) ("БС" :: String) ("Статус месяца" :: String) ("К выплате, руб." :: String))
+  putStrLn (printf "%-28s | %8s | %6s | %6s | %10s | %-15s | %18s" ("Сотрудник" :: String) ("KPI" :: String) ("Часы" :: String) ("Бол." :: String) ("Неопл. дни" :: String) ("Статус месяца" :: String) ("К выплате, руб." :: String))
   putStrLn (replicate 132 '-')
   mapM_
     ( \row ->
         putStrLn $
           printf
-            "%-28s | %8.3f | %6.1f | %6d | %6d | %-15s | %18.2f"
+            "%-28s | %8.3f | %6.1f | %6d | %10d | %-15s | %18.2f"
             (employeeName (pyEmployee row))
             (pyKpiCoeff row)
             (pyWorkedHours row)

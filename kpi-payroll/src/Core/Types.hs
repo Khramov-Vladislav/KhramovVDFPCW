@@ -56,7 +56,8 @@ data Config = Config
     cfgTaxRate :: Double,
     cfgSocialRate :: Double,
     cfgMinMonthlyHours :: Double,
-    cfgSickDayPayRate :: Double
+    cfgSickDayPayRate :: Double,
+    cfgHoursPerWorkday :: Double
   }
   deriving (Eq, Show)
 

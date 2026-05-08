@@ -24,6 +24,7 @@ instance FromJSON Config where
       <*> o A..: "socialRate"
       <*> o A..: "minMonthlyHours"
       <*> o A..: "sickDayPayRate"
+      <*> o A..: "hoursPerWorkday"
 
 loadConfig :: FilePath -> IO (Either AppError Config)
 loadConfig fp = do
